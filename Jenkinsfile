@@ -1,9 +1,5 @@
 pipeline {
   agent any
-   tools {
-     gradle "gradle6"
-   }
-  
   stages {
     stage("build") {
       steps {
@@ -12,7 +8,7 @@ pipeline {
     }
     stage("test") {
       steps {
-           bat 'gradle build'
+           bat 'tests'
       }
     }
     stage("deploy") {
