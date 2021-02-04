@@ -8,12 +8,12 @@ pipeline {
     }
     stage("test") {
       steps {
-           bat 'tests'
+           echo 'tests'
       }
     }
     stage("deploy") {
       steps {
-           bat 'echo deployying'
+           echo 'echo deployying'
       }
     }
   }
